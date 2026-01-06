@@ -7,6 +7,7 @@ This repository contains my Rust learning journey with Rustlings exercises. My g
 2. [✔️] Functions
 3. [✔️] If
 4. [✔️] Primitive Types
+5. [✔️] Vecs
 
 ## 📝 Notes
 
@@ -40,6 +41,14 @@ This repository contains my Rust learning journey with Rustlings exercises. My g
 - Characters (`char`): single quotes `'C'`, `'😉'`, has methods like `.is_alphabetic()`
 - Arrays & slices: fixed size, slice syntax `&a[1..4]` (end exclusive)
 - Tuples: multiple types `("name", 3.5)`, access with `tuple.0`, `tuple.1`
+
+### 05. Vecs
+- Vectors (`Vec<T>`): growable arrays, create with `vec![1, 2, 3]` macro
+- Unlike arrays, vectors can change size at runtime
+- Add elements with `.push()`, create empty with `Vec::new()`
+- Loop through slice `&[i32]` thwi `for &element in input`
+- Iterator pattern: `.iter().map(|x| x * 2).collect()` transforms elements
+- Dereference with `*v` to compare vector contents with array (haven't used it though)
 
 ### Quiz 1
 - Wrote function with `u32` params and return type

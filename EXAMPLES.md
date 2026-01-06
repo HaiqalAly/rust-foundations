@@ -113,3 +113,21 @@ fn main() {
 
 }
 ```
+
+05. Vecs
+```rust
+fn main() {
+    let mut v = vec![10, 20, 30];
+    v.push(40);
+    println!("v is {:#?}", v);
+
+    let mut results = Vec::new();
+
+    for &element in &v {
+        let doubled = element * 2;
+        results.push(doubled);
+    }
+
+    println!("the new v is: {:#?}", results);
+}
+```
