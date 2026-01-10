@@ -10,6 +10,7 @@ This repository contains my Rust learning journey with Rustlings exercises. My g
 5. [✔️] Vecs
 6. [✔️] Move Semantics
 7. [✔️] Structs
+8. [✔️] Enums
 
 ## 📝 Notes
 
@@ -66,6 +67,19 @@ This repository contains my Rust learning journey with Rustlings exercises. My g
 - Used struct update syntax (`..template`) in [exercises/07_structs/structs2.rs](exercises/07_structs/structs2.rs) to build a new `Order` from a template while overriding `name` and `count`
 - Implemented methods and an associated constructor in [exercises/07_structs/structs3.rs](exercises/07_structs/structs3.rs): `is_international()` comparing countries, and `get_fees()` multiplying `cents_per_gram * weight_in_grams`
 - Practiced method receivers with `&self`
+
+### 08. Enums
+- Defined basic enum with unit variants in [exercises/08_enums/enums1.rs](exercises/08_enums/enums1.rs)
+- Enums can have different variant types in [exercises/08_enums/enums2.rs](exercises/08_enums/enums2.rs):
+  - Unit variants: `Quit` (no data)
+  - Tuple variants: `Move(Point)`, `Echo(String)` (unnamed fields)
+  - Struct-like variants: `Resize { width: u32, height: u32 }` (named fields)
+- Pattern matching with `match` in [exercises/08_enums/enums3.rs](exercises/08_enums/enums3.rs):
+  - Destructure struct variants: `Message::Resize { width, height } => ...`
+  - Extract tuple data: `Message::Move(point) => ...`
+  - Handle all variants exhaustively (compiler enforces this)
+- Match expressions delegate to appropriate methods based on enum variant
+- Enums are powerful for representing data that can be one of several types
 
 ### Quiz 1
 - Wrote function with `u32` params and return type
