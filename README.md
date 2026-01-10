@@ -11,6 +11,7 @@ This repository contains my Rust learning journey with Rustlings exercises. My g
 6. [✔️] Move Semantics
 7. [✔️] Structs
 8. [✔️] Enums
+9. [✔️] Strings
 
 ## 📝 Notes
 
@@ -80,6 +81,23 @@ This repository contains my Rust learning journey with Rustlings exercises. My g
   - Handle all variants exhaustively (compiler enforces this)
 - Match expressions delegate to appropriate methods based on enum variant
 - Enums are powerful for representing data that can be one of several types
+
+### 09. Strings
+- Two main string types: `String` (owned, heap-allocated) and `&str` (string slice, borrowed)
+- Converting `&str` to `String` in [exercises/09_strings/strings1.rs](exercises/09_strings/strings1.rs): `.to_string()` method
+- Converting `String` to `&str` in [exercises/09_strings/strings2.rs](exercises/09_strings/strings2.rs): use `&` to borrow
+- String methods in [exercises/09_strings/strings3.rs](exercises/09_strings/strings3.rs):
+  - `.trim()` removes whitespace from both ends, returns `&str`
+  - `format!("{} world!", input)` concatenates strings, returns `String`
+  - `.replace("old", "new")` replaces substrings, returns new `String`
+- Multiple ways to create `String` in [exercises/09_strings/strings4.rs](exercises/09_strings/strings4.rs):
+  - `.to_string()` - converts to owned String
+  - `String::from()` - creates String from literal
+  - `.to_owned()` - clones into owned String
+  - `.into()` - type conversion (requires type inference)
+  - `format!()` - string interpolation
+- String slicing `&String[0..1]` returns `&str` (byte indexing, not character indexing)
+- Methods like `.trim()`, `.replace()`, `.to_lowercase()` return different types based on whether they modify
 
 ### Quiz 1
 - Wrote function with `u32` params and return type
