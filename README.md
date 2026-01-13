@@ -117,3 +117,13 @@ This repository contains my Rust learning journey with Rustlings exercises. My g
 - Wrote function with `u32` params and return type
 - Applied bulk discount logic: if qty > 40 then 1 rustbuck/apple, else 2 rustbucks/apple
 - Used `if/else` expression as return value (no semicolon needed)
+
+### Quiz 2
+- Built a string transformer function taking `Vec<(String, Command)>` input
+- Defined enum with three variants: `Uppercase`, `Trim`, and `Append(usize)` (tuple variant)
+- Used pattern matching to handle each command:
+  - `Uppercase`: called `.to_uppercase()` to convert string to uppercase
+  - `Trim`: called `.trim().to_string()` to remove whitespace and return owned String
+  - `Append(n)`: looped `n` times pushing "bar" to a mutable string
+- Imported function from module with `use crate::my_module::transformer`
+- Combined concepts: enums, match expressions, vectors, string methods, modules, and move semantics
