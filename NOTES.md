@@ -115,6 +115,13 @@
 - Defined generic vector `Vec<T>` in [exercises/14_generics/generics1.rs](exercises/14_generics/generics1.rs): explicit type annotation `Vec<i32>` needed when compiler cannot infer type from usage
 - Generic structs and implementations in [exercises/14_generics/generics2.rs](exercises/14_generics/generics2.rs): defined `struct Wrapper<T>` to hold any type, and `impl<T> Wrapper<T>` to define methods for that generic type
 
+## 15. Traits
+- Implementing traits in [exercises/15_traits/traits1.rs](exercises/15_traits/traits1.rs): defined behavior using `impl Trait for Type`, adding method `append_bar` to `String`
+- Trait implementations for generics in [exercises/15_traits/traits2.rs](exercises/15_traits/traits2.rs): implemented the trait for `Vec<String>`, demonstrating how to extend standard collection types
+- Default implementations in [exercises/15_traits/traits3.rs](exercises/15_traits/traits3.rs): defined a default body for `licensing_info` in the trait so implementors share common behavior automatically
+- Trait bounds with `impl Trait` in [exercises/15_traits/traits4.rs](exercises/15_traits/traits4.rs): used `fn func(arg: impl Trait)` to accept any type that implements a trait, enabling polymorphism
+- Multiple trait bounds in [exercises/15_traits/traits5.rs](exercises/15_traits/traits5.rs): used `+` syntax (`impl Trait1 + Trait2`) to specify that a parameter must implement multiple traits
+
 ---
 
 ## Quiz 1
